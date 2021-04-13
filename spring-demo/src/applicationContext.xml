@@ -9,8 +9,11 @@
 
     <!-- Define your beans here -->
     
-    <bean id="myCoach" class="com.springcourse.springdemo.CricketCoach">
+   <bean id="myFortune" class="com.springcourse.springdemo.HappyFortuneService">
+   </bean>
     
+    <bean id="myCoach" class="com.springcourse.springdemo.TrackCoach">
+    	<constructor-arg ref="myFortune" />
     </bean>
 </beans>
 
