@@ -13,6 +13,10 @@
 
     <!-- Define your beans here -->
     
+    <bean id = "myRandomFortuneService" class="com.springcourse.springdemo.RandomFortuneService">
+    </bean>
+    
+    
    <bean id="myFortuneService" class="com.springcourse.springdemo.HappyFortuneService">
    </bean>
     
@@ -21,7 +25,7 @@
     </bean>
     
     <bean id="myCricketCoach" class = "com.springcourse.springdemo.CricketCoach">
-    	<property name="fortuneService" ref="myFortuneService"></property>
+    	<property name="fortuneService" ref="myRandomFortuneService"></property>
     	<property name="emailAddress" value="${foo.email}"></property>
     	<property name="team" value="${foo.team}"></property>
     </bean>
