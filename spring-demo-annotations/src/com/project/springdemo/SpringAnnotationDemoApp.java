@@ -8,7 +8,7 @@ public class SpringAnnotationDemoApp {
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Coach theCoach = context.getBean("tennisCoach", Coach.class);
+		Coach theCoach = context.getBean("badmintonCoach", Coach.class);
 		
 		System.out.println(theCoach.getDailyWorkout());
 		
