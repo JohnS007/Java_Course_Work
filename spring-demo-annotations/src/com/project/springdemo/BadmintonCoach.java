@@ -18,9 +18,9 @@ public class BadmintonCoach implements Coach {
 	}
 	
 	@Autowired
-	public void setFortuneService(FortuneService theFortuneService) {
+	public void customMethodForDependencyInjection(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
-		System.out.println(">> Inside setFortuneService() for badminton coach");
+		System.out.println(">> Inside customMethodForDependencyInjection() for badminton coach");
 	}
 	
 	@Override
