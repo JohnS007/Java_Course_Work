@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BadmintonCoach implements Coach {
 
+	@Autowired
 	private FortuneService fortuneService;
 	
 //	@Autowired
@@ -17,11 +18,11 @@ public class BadmintonCoach implements Coach {
 		System.out.println(">> Inside No-arg constructor for badminton coach");
 	}
 	
-	@Autowired
-	public void customMethodForDependencyInjection(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
-		System.out.println(">> Inside customMethodForDependencyInjection() for badminton coach");
-	}
+//	@Autowired
+//	public void customMethodForDependencyInjection(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//		System.out.println(">> Inside customMethodForDependencyInjection() for badminton coach");
+//	}
 	
 	@Override
 	public String getDailyWorkout() {
