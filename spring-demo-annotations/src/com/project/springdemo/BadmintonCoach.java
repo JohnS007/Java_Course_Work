@@ -8,9 +8,19 @@ public class BadmintonCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
+//	@Autowired
+//	public BadmintonCoach(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//	}
+	
+	public BadmintonCoach() {
+		System.out.println(">> Inside No-arg constructor for badminton coach");
+	}
+	
 	@Autowired
-	public BadmintonCoach(FortuneService theFortuneService) {
+	public void setFortuneService(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
+		System.out.println(">> Inside setFortuneService() for badminton coach");
 	}
 	
 	@Override
